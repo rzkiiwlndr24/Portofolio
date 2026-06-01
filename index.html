@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Rizki Wulandari - Creative Graphic Designer & Communications Specialist." />
+  <title>Rizki Wulandari | Creative Graphic Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#111827;--ink:#243041;--muted:#667085;--teal:#00b8a9;--coral:#ff6b6b;--lav:#f4f2ff;--cream:#fafaf7;--white:#fff;--line:rgba(17,24,39,.12);--radius:8px;--shadow:0 22px 60px rgba(17,24,39,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.container{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(250,250,247,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(17,24,39,.08)}nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy)}.mark{width:42px;height:42px;border-radius:var(--radius);display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--teal),var(--coral));box-shadow:0 12px 26px rgba(0,184,169,.25)}.links{display:flex;gap:8px}.links a{padding:10px 14px;border-radius:var(--radius);font-weight:700;color:var(--muted)}.links a:hover{background:rgba(0,184,169,.1);color:var(--navy)}
+    .menu{display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:var(--radius)}.menu span{display:block;width:18px;height:2px;background:var(--navy);margin:4px auto}
+    section{padding:92px 0}.hero{padding:72px 0 84px;overflow:hidden;background:radial-gradient(circle at 8% 20%,rgba(0,184,169,.16),transparent 28%),radial-gradient(circle at 92% 12%,rgba(255,107,107,.16),transparent 30%),linear-gradient(180deg,#fff,var(--cream))}.hero-grid{min-height:calc(100vh - 150px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:58px}.eyebrow{margin:0 0 14px;color:#008c82;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h1,h2,h3{margin:0;color:var(--navy);font-family:Poppins,Inter,sans-serif;line-height:1.08;letter-spacing:0}h1{font-size:clamp(2.55rem,6vw,5.3rem)}h2{font-size:clamp(2rem,4vw,3.25rem)}h3{font-size:1.17rem}.lead{max-width:680px;margin:24px 0 0;color:var(--muted);font-size:1.08rem}
+    .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}.btn{min-height:50px;padding:0 22px;border-radius:var(--radius);display:inline-flex;align-items:center;justify-content:center;font-weight:800;border:1px solid transparent;cursor:pointer}.primary{background:var(--coral);color:#fff;box-shadow:0 14px 28px rgba(255,107,107,.28)}.secondary{background:#fff;border-color:var(--line);color:var(--navy)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:610px;margin-top:44px}.stats div{background:rgba(255,255,255,.76);border:1px solid var(--line);border-radius:var(--radius);padding:22px}.stats strong{display:block;color:#008c82;font-family:Poppins,sans-serif;font-size:2rem;line-height:1}.stats span{display:block;margin-top:8px;color:var(--muted);font-size:.93rem}
+    .visual{position:relative;min-height:590px}.blob{position:absolute;inset:40px 20px 60px;display:grid;place-items:center;background:var(--lav);border-radius:34px;box-shadow:var(--shadow);overflow:hidden}.blob svg{width:90%;height:auto}.float{position:absolute;max-width:245px;padding:16px;background:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.75);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(16px)}.float span{display:block;color:#008c82;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.float strong{font-size:.95rem;color:var(--navy)}.f1{top:24px;left:0}.f2{right:0;top:220px}.f3{left:48px;bottom:36px}
+    .about{background:#fff}.about-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:58px}.about p{margin:0 0 18px;color:var(--muted);font-size:1.03rem}.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.skills span,.tags span{padding:7px 12px;border-radius:var(--radius);background:rgba(0,184,169,.08);border:1px solid rgba(0,184,169,.22);color:#008c82;font-size:.84rem;font-weight:800}
+    .heading{display:grid;grid-template-columns:1fr .55fr;gap:40px;align-items:end;margin-bottom:30px}.heading p{margin:0;color:var(--muted)}.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}.filters button{min-height:42px;padding:0 16px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.filters button.active,.filters button:hover{background:var(--navy);color:#fff}.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 18px 44px rgba(17,24,39,.08)}.thumb{height:230px;display:grid;place-items:center;background:var(--lav)}.thumb svg{width:78%;height:auto}.card-body{padding:22px}.kicker{margin:0 0 8px;color:var(--coral);font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.card p:not(.kicker){margin:10px 0 0;color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tags span{font-size:.74rem;padding:5px 9px}.hide{display:none}
+    .experience{background:var(--lav)}.timeline{position:relative;display:grid;gap:18px;margin-top:34px}.timeline:before{content:"";position:absolute;left:185px;top:14px;bottom:14px;width:2px;background:rgba(0,184,169,.3)}.item{position:relative;display:grid;grid-template-columns:160px 1fr;gap:52px}.item:before{content:"";position:absolute;left:177px;top:14px;width:18px;height:18px;border-radius:50%;background:var(--teal);border:4px solid var(--lav);box-shadow:0 0 0 4px rgba(0,184,169,.22)}time{padding-top:8px;color:#008c82;font-size:.92rem;font-weight:800}.item div{padding:24px;background:rgba(255,255,255,.84);border:1px solid rgba(17,24,39,.1);border-radius:var(--radius)}.company{margin:7px 0 0!important;color:var(--coral)!important;font-weight:800}.item p{margin:10px 0 0;color:var(--muted)}
+    .contact{background:linear-gradient(135deg,rgba(0,184,169,.1),rgba(255,107,107,.1)),#fff}.contact-grid{display:grid;grid-template-columns:.9fr .8fr;gap:62px}.contact p{color:var(--muted)}.contact-list{display:grid;gap:10px;margin-top:28px}.contact-list a,.contact-list span{width:max-content;max-width:100%;padding:10px 12px;border-radius:var(--radius);background:rgba(255,255,255,.8);font-weight:800;color:var(--navy)}form{display:grid;gap:10px;padding:28px;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}label{font-weight:800;color:var(--navy);font-size:.9rem}input,select,textarea{width:100%;padding:12px 14px;border:1px solid rgba(17,24,39,.16);border-radius:var(--radius);background:#fff;color:var(--navy)}input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(0,184,169,.14)}textarea{resize:vertical}form .btn{width:100%;margin-top:8px}.note{font-size:.85rem;margin:4px 0 0;color:var(--muted)}
+    footer{padding:28px 0;background:var(--navy);color:rgba(255,255,255,.76)}.foot{display:flex;justify-content:space-between;gap:20px}.foot p{margin:0}.foot a{font-weight:800}
+    @media(max-width:920px){.hero-grid,.about-grid,.heading,.contact-grid{grid-template-columns:1fr}.hero-grid{min-height:auto}.visual{min-height:500px}.portfolio-grid{grid-template-columns:1fr}.timeline:before{left:9px}.item{grid-template-columns:1fr;gap:8px;padding-left:38px}.item:before{left:0}}
+    @media(max-width:720px){.container{width:min(100% - 28px,1120px)}nav{height:68px}.brand-name{display:none}.menu{display:block}.links{position:absolute;left:14px;right:14px;top:76px;display:none;flex-direction:column;align-items:stretch;padding:12px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.links.open{display:flex}section,.hero{padding:64px 0}h1{font-size:clamp(2.25rem,13vw,3.6rem)}.actions .btn{width:100%}.stats{grid-template-columns:1fr}.visual{min-height:410px}.blob{inset:24px 0 80px}.float{max-width:215px;padding:13px}.f1{top:0}.f2{top:auto;right:0;bottom:128px}.f3{left:0;bottom:18px}.filters{display:grid;grid-template-columns:1fr 1fr}.foot{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header id="top">
+    <nav class="container">
+      <a class="brand" href="#top"><span class="mark">RW</span><span class="brand-name">Rizki Wulandari</span></a>
+      <button class="menu" aria-label="Buka menu"><span></span><span></span><span></span></button>
+      <div class="links">
+        <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Creative Graphic Designer & Communications Specialist</p>
+          <h1>Mengubah Ide Menjadi Visual yang Berbicara, Bergerak, dan Berdampak.</h1>
+          <p class="lead">Saya Rizki Wulandari, kreator visual dengan latar belakang Sistem Informasi. Saya menggabungkan desain, strategi komunikasi, dan pemahaman teknologi untuk membangun konten yang menarik, jelas, dan membantu brand tumbuh.</p>
+          <div class="actions"><a class="btn primary" href="#portfolio">Lihat Portfolio</a><a class="btn secondary" href="#contact">Hubungi Saya</a></div>
+          <div class="stats"><div><strong>40%</strong><span>Peningkatan penjualan melalui pemasaran visual</span></div><div><strong>4+</strong><span>Bidang kreatif: desain, video, sosial media, sponsor</span></div></div>
+        </div>
+
+        <div class="visual">
+          <div class="blob">
+            <svg viewBox="0 0 760 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="380" cy="380" r="270" fill="#fff"/><circle cx="380" cy="380" r="220" fill="#E8FFFC"/>
+              <rect x="160" y="145" width="250" height="320" rx="30" fill="#111827"/><rect x="185" y="175" width="200" height="250" rx="22" fill="#FAFAF7"/>
+              <rect x="215" y="205" width="140" height="22" rx="11" fill="#00B8A9"/><rect x="215" y="258" width="140" height="125" rx="25" fill="#FF6B6B"/><circle cx="285" cy="320" r="38" fill="#fff"/>
+              <rect x="380" y="250" width="230" height="285" rx="34" fill="#fff" stroke="#111827" stroke-width="13"/><rect x="420" y="295" width="150" height="90" rx="20" fill="#00B8A9"/><path d="M480 318l58 22-58 24v-46z" fill="#fff"/>
+              <path d="M425 430h130M425 470h100M425 510h70" stroke="#111827" stroke-width="14" stroke-linecap="round"/>
+              <rect x="100" y="455" width="250" height="145" rx="28" fill="#fff" stroke="#00B8A9" stroke-width="12"/><rect x="135" y="492" width="52" height="52" rx="16" fill="#00B8A9"/><path d="M210 500h95M210 532h70M210 564h110" stroke="#111827" stroke-width="12" stroke-linecap="round"/>
+              <circle cx="610" cy="150" r="55" fill="#FF6B6B"/><path d="M585 150h50M610 125v50" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="float f1"><span>Design</span><strong>Canva · CorelDRAW · Photoshop</strong></div>
+          <div class="float f2"><span>Video</span><strong>Premiere Pro · CapCut</strong></div>
+          <div class="float f3"><span>Social Media</span><strong>Instagram · Facebook · YouTube</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div><p class="eyebrow">About Me</p><h2>Desainer yang berpikir strategis, komunikatif, dan berbasis data.</h2></div>
+        <div>
+          <p>Saya adalah mahasiswa Sistem Informasi yang memiliki passion kuat di bidang desain grafis, komunikasi visual, dan manajemen media sosial. Dengan pengalaman menggunakan Canva, CorelDRAW, Adobe Photoshop, Adobe Premiere Pro, dan CapCut, saya terbiasa menerjemahkan kebutuhan brand menjadi konten visual yang rapi, kreatif, dan tepat sasaran.</p>
+          <p>Perpaduan latar belakang IT dan kemampuan kreatif membantu saya memahami data, membaca tren, menyusun pesan, lalu mengemasnya menjadi visual yang mudah dipahami audiens. Saya juga berpengalaman membangun hubungan sponsor/klien dan memimpin proyek komunikasi kreatif.</p>
+          <div class="skills"><span>Graphic Design</span><span>Social Media Management</span><span>Video Editing</span><span>Copywriting</span><span>Digital Marketing</span><span>Sponsor Relations</span><span>Photography</span><span>Public Speaking</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="heading">
+          <div><p class="eyebrow">Selected Works</p><h2>Karya visual untuk brand, komunitas, dan kampanye komunikasi.</h2></div>
+          <p>Setiap visual dibuat dengan tujuan: memperkuat pesan, membangun kepercayaan, dan membantu audiens mengambil tindakan.</p>
+        </div>
+        <div class="filters"><button class="active" data-filter="all">Semua</button><button data-filter="design">Desain Grafis</button><button data-filter="social">Media Sosial</button><button data-filter="video">Produksi Video</button></div>
+        <div class="portfolio-grid">
+          <article class="card" data-category="design"><div class="thumb"><svg viewBox="0 0 420 330"><rect width="420" height="330" rx="20" fill="#F4F2FF"/><rect x="55" y="45" width="150" height="235" rx="18" fill="#fff" stroke="#111827" stroke-width="8"/><rect x="75" y="70" width="110" height="22" rx="11" fill="#00B8A9"/><rect x="75" y="120" width="92" height="88" rx="18" fill="#FF6B6B"/><rect x="230" y="72" width="140" height="200" rx="18" fill="#111827"/><path d="M255 125h85M255 165h65M255 205h95" stroke="#fff" stroke-width="10" stroke-linecap="round"/></svg></div><div class="card-body"><p class="kicker">Desain Grafis</p><h3>Promotional & Product Visuals</h3><p>Materi promosi, katalog produk, template surat, dan kartu ucapan sponsor yang konsisten dengan pesan brand.</p><div class="tags"><span>Canva</span><span>CorelDRAW</span><span>Photoshop</span></div></div></article>
+          <article class="card" data-category="social"><div class="thumb"><svg viewBox="0 0 420 330"><rect width="420" height="330" rx="20" fill="#E8FFFC"/><rect x="48" y="58" width="324" height="215" rx="24" fill="#fff" stroke="#111827" stroke-width="8"/><rect x="78" y="95" width="82" height="68" rx="14" fill="#00B8A9"/><rect x="170" y="95" width="82" height="68" rx="14" fill="#F4F2FF" stroke="#00B8A9" stroke-width="6"/><rect x="262" y="95" width="82" height="68" rx="14" fill="#FF6B6B"/><path d="M84 200h68M176 200h68M268 200h68" stroke="#111827" stroke-width="9" stroke-linecap="round"/></svg></div><div class="card-body"><p class="kicker">Manajemen Media Sosial</p><h3>Editorial Content System</h3><p>Perencanaan konten, desain posting, jadwal publikasi, interaksi audiens, dan evaluasi performa kampanye.</p><div class="tags"><span>Instagram</span><span>Facebook</span><span>YouTube</span></div></div></article>
+          <article class="card" data-category="video"><div class="thumb"><svg viewBox="0 0 420 330"><rect width="420" height="330" rx="20" fill="#FAFAF7"/><rect x="55" y="64" width="310" height="190" rx="24" fill="#111827"/><rect x="85" y="94" width="185" height="105" rx="18" fill="#F4F2FF"/><path d="M162 128l55 24-55 24v-48z" fill="#FF6B6B"/><rect x="85" y="218" width="70" height="18" rx="9" fill="#00B8A9"/><rect x="165" y="218" width="110" height="18" rx="9" fill="#fff"/><rect x="285" y="218" width="50" height="18" rx="9" fill="#FF6B6B"/></svg></div><div class="card-body"><p class="kicker">Produksi Video</p><h3>Campaign & Testimonial Video</h3><p>Video storytelling untuk program, testimonial, dokumentasi kegiatan, dan kampanye kesadaran yang menonjolkan dampak.</p><div class="tags"><span>Premiere Pro</span><span>CapCut</span><span>Storytelling</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="heading"><div><p class="eyebrow">Experience</p><h2>Perjalanan profesional yang mempertemukan desain, komunikasi, dan relasi.</h2></div><p>Pengalaman di lingkungan komersial dan organisasi non-profit membentuk cara kerja yang adaptif, terstruktur, dan berorientasi dampak.</p></div>
+        <div class="timeline">
+          <article class="item"><time>Juni 2024 - Sekarang</time><div><h3>Koordinator Media Komunikasi</h3><p class="company">YPSK Lampung</p><p>Mengembangkan konten tulisan, foto, dan video yang menonjolkan kisah inspiratif penerima manfaat serta dampak program.</p></div></article>
+          <article class="item"><time>Mei 2023 - Sekarang</time><div><h3>Co-Sponsorship Relation Officer</h3><p class="company">YPSK Lampung</p><p>Membangun komunikasi dengan sponsor, membuat laporan kegiatan, serta merancang materi visual dan video testimonial program.</p></div></article>
+          <article class="item"><time>Maret 2022 - Mei 2023</time><div><h3>Koordinator Administrasi dan Marketing</h3><p class="company">Bazink Art</p><p>Membuat materi promosi, mengelola media sosial, melakukan riset pasar, dan mendukung strategi pemasaran yang meningkatkan penjualan 40%.</p></div></article>
+          <article class="item"><time>Januari 2022 - Maret 2022</time><div><h3>Desainer Grafis</h3><p class="company">Bazink Art</p><p>Membuat konsep desain sesuai kebutuhan pelanggan, tren pasar, dan standar produksi menggunakan Canva, CorelDRAW, dan Photoshop.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p><h2>Mari wujudkan ide visual yang lebih kuat.</h2>
+          <p>Punya proyek desain, kampanye media sosial, video komunikasi, atau kebutuhan visual brand? Saya siap membantu merancang konten yang kreatif, rapi, dan tepat sasaran.</p>
+          <div class="contact-list"><a href="mailto:rzkiiwlndr@gmail.com">rzkiiwlndr@gmail.com</a><a href="tel:+6282278444670">+62 822-7844-4670</a><span>Pringsewu, Lampung</span></div>
+        </div>
+        <form id="contactForm">
+          <label for="name">Nama</label><input id="name" name="name" type="text" placeholder="Nama Anda" required />
+          <label for="email">Email</label><input id="email" name="email" type="email" placeholder="nama@email.com" required />
+          <label for="project">Jenis Proyek</label><select id="project" name="project" required><option value="">Pilih kebutuhan</option><option>Desain Grafis</option><option>Manajemen Media Sosial</option><option>Produksi Video</option><option>Kolaborasi / Sponsor</option></select>
+          <label for="message">Pesan</label><textarea id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan proyek Anda..." required></textarea>
+          <button class="btn primary" type="submit">Kirim Pesan</button><p class="note">Form ini akan membuka email Anda dengan pesan yang sudah tersusun otomatis.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container foot"><p>© <span id="year"></span> Rizki Wulandari. All rights reserved.</p><a href="#top">Kembali ke atas</a></div></footer>
+
+  <script>
+    const menu=document.querySelector(".menu"),links=document.querySelector(".links");
+    menu.addEventListener("click",()=>links.classList.toggle("open"));
+    links.addEventListener("click",e=>{if(e.target.matches("a"))links.classList.remove("open")});
+    document.querySelectorAll("[data-filter]").forEach(btn=>btn.addEventListener("click",()=>{
+      document.querySelectorAll("[data-filter]").forEach(b=>b.classList.remove("active"));
+      btn.classList.add("active");
+      const filter=btn.dataset.filter;
+      document.querySelectorAll("[data-category]").forEach(card=>card.classList.toggle("hide",filter!=="all"&&card.dataset.category!==filter));
+    }));
+    document.getElementById("contactForm").addEventListener("submit",e=>{
+      e.preventDefault();
+      const data=new FormData(e.target);
+      const subject=encodeURIComponent(`Project Inquiry - ${data.get("project")}`);
+      const body=encodeURIComponent(`Halo Rizki,\n\nNama: ${data.get("name")}\nEmail: ${data.get("email")}\nJenis Proyek: ${data.get("project")}\n\nPesan:\n${data.get("message")}\n\nTerima kasih.`);
+      location.href=`mailto:rzkiiwlndr@gmail.com?subject=${subject}&body=${body}`;
+    });
+    document.getElementById("year").textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
