@@ -1,167 +1,1088 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio Rizki Wulandari - Creative Designer, MC, Fasilitator & Digital Marketing Specialist." />
   <title>Rizki Wulandari | Portfolio Profesional</title>
-  
-  <!-- Favicon / Icon Aplikasi -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>RW</text></svg>" />
 
-  <!-- Google Fonts -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23FF69B4'/%3E%3Ctext x='50' y='62' font-size='34' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'%3ERW%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    /* ==================== CSS VARIABLES (THEME PINK & BLUE) ==================== */
     :root {
-      --primary-pink: #FF69B4;
-      --dark-pink: #D63384;
-      --light-pink: #FFE4EC;
-      --soft-pink: #FFF0F5;
-      
-      --primary-blue: #3B82F6;
-      --dark-blue: #1E40AF;
-      --light-blue: #EFF6FF;
-      --soft-blue: #DBEAFE;
-      
-      --navy: #1E293B;
+      --primary-pink: #ff69b4;
+      --dark-pink: #d63384;
+      --light-pink: #ffe4ec;
+      --soft-pink: #fff0f5;
+      --primary-blue: #3b82f6;
+      --dark-blue: #1e40af;
+      --light-blue: #eff6ff;
+      --soft-blue: #dbeafe;
+      --navy: #1e293b;
       --ink: #334155;
-      --muted: #64748B;
-      --gray: #F1F5F9;
-      --white: #FFFFFF;
-      
-      --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-      --shadow-md: 0 10px 25px rgba(0,0,0,0.1);
-      --shadow-lg: 0 25px 50px rgba(0,0,0,0.15);
-      --shadow-pink: 0 20px 40px rgba(255,105,180,0.25);
-      --shadow-blue: 0 20px 40px rgba(59,130,246,0.25);
-      
+      --muted: #64748b;
+      --gray: #f1f5f9;
+      --white: #ffffff;
+      --line: rgba(15, 23, 42, 0.1);
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.15);
+      --shadow-pink: 0 20px 40px rgba(255, 105, 180, 0.24);
+      --shadow-blue: 0 20px 40px rgba(59, 130, 246, 0.2);
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 20px;
-      --radius-full: 50px;
+      --radius-full: 999px;
     }
 
-    /* Dark Mode */
     [data-theme="dark"] {
-      --navy: #F8FAFC;
-      --ink: #E2E8F0;
-      --muted: #94A3B8;
-      --gray: #1E293B;
-      --white: #0B1120;
-      --soft-pink: rgba(255,105,180,0.15);
-      --soft-blue: rgba(59,130,246,0.15);
+      --navy: #f8fafc;
+      --ink: #e2e8f0;
+      --muted: #94a3b8;
+      --gray: #1e293b;
+      --white: #0b1120;
+      --line: rgba(255, 255, 255, 0.1);
+      --soft-pink: rgba(255, 105, 180, 0.13);
+      --soft-blue: rgba(59, 130, 246, 0.13);
     }
 
-    /* ==================== RESET & BASE STYLES ==================== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-    body { font-family: 'Inter', system-ui, sans-serif; background: var(--white); color: var(--ink); line-height: 1.7; transition: all 0.3s ease; }
-    [data-theme="dark"] body { background: #0B1120; color: #E2E8F0; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; height: auto; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.7;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
     ul { list-style: none; }
+    button, input, textarea, select { font: inherit; }
     .container { width: min(1200px, calc(100% - 40px)); margin: 0 auto; }
-    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: var(--navy); line-height: 1.2; }
-    [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 { color: #F8FAFC; }
-    h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-    h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
-    h3 { font-size: 1.5rem; }
 
-    /* ==================== HEADER ==================== */
-    header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); transition: all 0.3s ease; }
-    [data-theme="dark"] header { background: rgba(11,17,32,0.95); border-color: rgba(255,255,255,0.05); }
-    .navbar { height: 80px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.5rem; color: var(--navy); }
-    [data-theme="dark"] .logo { color: #F8FAFC; }
-    .logo-icon { width: 45px; height: 45px; background: linear-gradient(135deg, var(--primary-pink), var(--primary-blue)); border-radius: var(--radius-md); display: grid; place-items: center; color: white; font-size: 1.2rem; box-shadow: var(--shadow-pink); }
+    h1, h2, h3, h4 {
+      font-family: Poppins, Inter, sans-serif;
+      color: var(--navy);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.4rem); }
+    h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+    h3 { font-size: 1.35rem; }
+
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+    }
+    [data-theme="dark"] header { background: rgba(11, 17, 32, 0.92); }
+
+    .navbar {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .logo-icon {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--primary-pink), var(--primary-blue));
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-pink);
+    }
+
     .nav-menu { display: flex; align-items: center; gap: 8px; }
-    .nav-link { padding: 10px 20px; border-radius: var(--radius-full); font-weight: 600; color: var(--muted); transition: all 0.3s ease; }
-    .nav-link:hover, .nav-link.active { background: var(--soft-pink); color: var(--dark-pink); }
-    .nav-actions { display: flex; align-items: center; gap: 12px; }
-    .theme-toggle { width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--gray); background: var(--white); cursor: pointer; display: grid; place-items: center; transition: all 0.3s ease; color: var(--navy); }
-    [data-theme="dark"] .theme-toggle { border-color: var(--gray); color: #F8FAFC; }
-    .theme-toggle:hover { border-color: var(--primary-blue); color: var(--primary-blue); }
-    .mobile-toggle { display: none; width: 45px; height: 45px; border-radius: var(--radius-md); background: var(--gray); border: none; cursor: pointer; place-items: center; font-size: 1.2rem; }
+    .nav-link {
+      padding: 10px 16px;
+      border-radius: var(--radius-full);
+      color: var(--muted);
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      background: var(--soft-pink);
+      color: var(--dark-pink);
+    }
 
-    /* ==================== BUTTONS ==================== */
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; border-radius: var(--radius-full); font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: all 0.3s ease; }
-    .btn-primary { background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink)); color: white; box-shadow: var(--shadow-pink); }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 25px 50px rgba(255,105,180,0.4); }
-    .btn-secondary { background: var(--white); color: var(--navy); border: 2px solid var(--gray); }
-    [data-theme="dark"] .btn-secondary { background: #1E293B; color: #F8FAFC; }
-    .btn-secondary:hover { border-color: var(--primary-blue); color: var(--primary-blue); }
-    .btn-sm { padding: 10px 20px; font-size: 0.875rem; }
-    .btn-download { background: var(--primary-blue); color: white; }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .theme-toggle, .mobile-toggle {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--navy);
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+    .theme-toggle:hover, .mobile-toggle:hover {
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+    }
+    .mobile-toggle { display: none; border-radius: var(--radius-md); }
 
-    /* ==================== HERO SECTION ==================== */
-    .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; background: linear-gradient(135deg, var(--soft-pink) 0%, var(--soft-blue) 100%); position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,105,180,0.2) 0%, transparent 70%); top: -150px; right: -100px; animation: float 6s ease-in-out infinite; }
-    .hero::after { content: ''; position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%); bottom: -50px; left: -50px; animation: float 8s ease-in-out infinite reverse; }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--white); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; color: var(--dark-pink); margin-bottom: 20px; box-shadow: var(--shadow-sm); }
-    h1 { margin-bottom: 20px; }
-    h1 span { color: var(--primary-blue); }
-    .hero-desc { font-size: 1.125rem; color: var(--muted); margin-bottom: 30px; max-width: 550px; }
-    .hero-buttons { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
-    .hero-stats { display: flex; gap: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.1); }
-    .stat-item h3 { font-size: 2.5rem; color: var(--dark-pink); }
-    .stat-item p { font-size: 0.875rem; color: var(--muted); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 0 24px;
+      border: 0;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+      box-shadow: var(--shadow-pink);
+    }
+    .btn-secondary {
+      color: var(--navy);
+      background: var(--white);
+      border: 2px solid var(--line);
+    }
+    .btn-download {
+      color: white;
+      background: var(--primary-blue);
+      box-shadow: var(--shadow-blue);
+    }
 
-    /* Profile Card */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--soft-pink), var(--soft-blue));
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 470px;
+      height: 470px;
+      top: -150px;
+      right: -120px;
+      background: radial-gradient(circle, rgba(255, 105, 180, 0.22), transparent 70%);
+      animation: float 7s ease-in-out infinite;
+    }
+    .hero::after {
+      width: 320px;
+      height: 320px;
+      left: -80px;
+      bottom: -80px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.22), transparent 70%);
+      animation: float 9s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      margin-bottom: 20px;
+      background: var(--white);
+      color: var(--dark-pink);
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 800;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero h1 { margin-bottom: 20px; }
+    .hero h1 span { color: var(--primary-blue); }
+    .hero-desc {
+      max-width: 620px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 38px; }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+    .stat-item h3 { color: var(--dark-pink); font-size: 2.35rem; }
+    .stat-item p { color: var(--muted); font-size: 0.9rem; }
+
     .hero-visual { position: relative; }
-    .profile-card { position: relative; width: 100%; max-width: 400px; margin: 0 auto; }
-    .profile-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 30px; box-shadow: var(--shadow-lg); background: linear-gradient(135deg, var(--light-pink), var(--light-blue)); }
-    .profile-placeholder { width: 100%; aspect-ratio: 3/4; border-radius: 30px; box-shadow: var(--shadow-lg); background: linear-gradient(135deg, var(--light-pink), var(--light-blue)); display: flex; align-items: center; justify-content: center; flex-direction: column; color: var(--muted); }
-    .profile-placeholder i { font-size: 5rem; margin-bottom: 20px; color: var(--primary-pink); }
-    .profile-badge { position: absolute; background: var(--white); padding: 16px 24px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 12px; animation: bounce 2s ease-in-out infinite; }
-    .profile-badge-1 { top: 20px; left: -30px; }
-    .profile-badge-2 { bottom: 40px; right: -20px; animation-delay: 1s; }
-    .badge-icon { width: 50px; height: 50px; border-radius: var(--radius-md); display: grid; place-items: center; font-size: 1.5rem; }
+    .profile-card {
+      position: relative;
+      width: min(100%, 410px);
+      margin: 0 auto;
+    }
+    .profile-placeholder {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(255, 105, 180, 0.18), rgba(59, 130, 246, 0.2)),
+        var(--white);
+      box-shadow: var(--shadow-lg);
+      color: var(--muted);
+      text-align: center;
+      padding: 28px;
+      border: 1px solid var(--line);
+    }
+    .profile-placeholder i {
+      margin-bottom: 18px;
+      color: var(--primary-pink);
+      font-size: 5rem;
+    }
+    .profile-placeholder strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+    .profile-badge {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 260px;
+      padding: 14px 18px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      animation: bounce 2.6s ease-in-out infinite;
+    }
+    .profile-badge-1 { top: 22px; left: -42px; }
+    .profile-badge-2 { right: -28px; bottom: 42px; animation-delay: 1s; }
+    .badge-icon {
+      flex: 0 0 auto;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-md);
+      font-size: 1.3rem;
+    }
     .badge-icon.pink { background: var(--soft-pink); color: var(--dark-pink); }
     .badge-icon.blue { background: var(--soft-blue); color: var(--primary-blue); }
-    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); }
+    .profile-badge strong { display: block; color: var(--navy); font-size: 0.95rem; }
+    .profile-badge span { color: var(--muted); font-size: 0.82rem; }
 
-    /* ==================== SECTIONS GENERAL ==================== */
     section { padding: 100px 0; }
-    .section-header { text-align: center; max-width: 600px; margin: 0 auto 60px; }
-    .section-label { display: inline-block; padding: 8px 20px; background: var(--soft-pink); color: var(--dark-pink); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 16px; }
+    .section-header {
+      max-width: 700px;
+      margin: 0 auto 58px;
+      text-align: center;
+    }
+    .section-label {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 20px;
+      border-radius: var(--radius-full);
+      background: var(--soft-pink);
+      color: var(--dark-pink);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
     .section-title { margin-bottom: 16px; }
-    .section-desc { color: var(--muted); font-size: 1.1rem; }
+    .section-desc { color: var(--muted); font-size: 1.06rem; }
 
-    /* ==================== ABOUT ==================== */
     .about { background: var(--white); }
-    [data-theme="dark"] .about { background: #0B1120; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
-    .about-img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); background: var(--light-pink); }
-    .about-text p { color: var(--muted); margin-bottom: 20px; font-size: 1.05rem; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-visual {
+      min-height: 420px;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(255, 105, 180, 0.12), rgba(59, 130, 246, 0.16)),
+        var(--gray);
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      place-items: center;
+      padding: 30px;
+      border: 1px solid var(--line);
+    }
+    .about-board {
+      width: 100%;
+      display: grid;
+      gap: 14px;
+    }
+    .board-card {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+    }
+    .board-card i { color: var(--primary-pink); margin-right: 8px; }
+    .about-text p {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
     .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .skill-tag { padding: 10px 18px; background: var(--soft-pink); color: var(--dark-pink); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; }
+    .skill-tag {
+      padding: 9px 16px;
+      border-radius: var(--radius-full);
+      background: var(--soft-pink);
+      color: var(--dark-pink);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
 
-    /* ==================== SERVICES ==================== */
     .services { background: var(--gray); }
-    [data-theme="dark"] .services { background: #1E293B; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .service-card { background: var(--white); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); transition: all 0.3s ease; border: 2px solid transparent; }
-    [data-theme="dark"] .service-card { background: #0B1120; }
-    .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); border-color: var(--primary-pink); }
-    .service-icon { width: 70px; height: 70px; background: var(--soft-pink); border-radius: var(--radius-lg); display: grid; place-items: center; font-size: 1.75rem; color: var(--dark-pink); margin-bottom: 24px; }
-    .service-card h3 { margin-bottom: 12px; }
-    .service-card p { color: var(--muted); margin-bottom: 20px; }
-    .service-link { color: var(--primary-blue); font-weight: 600; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
-    .service-link:hover { gap: 12px; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      transition: 0.25s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-pink);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: var(--radius-lg);
+      background: var(--soft-pink);
+      color: var(--dark-pink);
+      font-size: 1.55rem;
+    }
+    .service-card p { margin-top: 10px; color: var(--muted); }
 
-    /* ==================== PORTFOLIO ==================== */
-    .portfolio { background: linear-gradient(135deg, var(--soft-pink), var(--soft-blue)); }
-    .filters { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 40px; }
-    .filter-btn { padding: 12px 24px; background: var(--white); border: 2px solid var(--gray); border-radius: var(--radius-full); font-weight: 600; color: var(--muted); cursor: pointer; transition: all 0.3s ease; }
-    .filter-btn:hover, .filter-btn.active { background: var(--primary-pink); color: white; border-color: var(--primary-pink); }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
-    .portfolio-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: all 0.3
+    .portfolio {
+      background: linear-gradient(135deg, var(--soft-pink), var(--soft-blue));
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 11px 22px;
+      border: 2px solid var(--line);
+      border-radius: var(--radius-full);
+      background: var(--white);
+      color: var(--muted);
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      color: white;
+      background: var(--primary-pink);
+      border-color: var(--primary-pink);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+    .portfolio-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+      transition: 0.25s ease;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .portfolio-card.hide { display: none; }
+    .portfolio-thumb {
+      height: 230px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--light-pink), var(--light-blue));
+    }
+    .portfolio-thumb i {
+      color: var(--dark-pink);
+      font-size: 4rem;
+    }
+    .portfolio-content { padding: 28px; }
+    .portfolio-category {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--dark-pink);
+      font-weight: 800;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .portfolio-content p {
+      margin: 12px 0 18px;
+      color: var(--muted);
+    }
+    .portfolio-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .portfolio-tags span {
+      padding: 6px 10px;
+      border-radius: var(--radius-full);
+      background: var(--soft-blue);
+      color: var(--dark-blue);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .experience { background: var(--white); }
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 26px;
+      width: 3px;
+      background: linear-gradient(var(--primary-pink), var(--primary-blue));
+      border-radius: var(--radius-full);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 78px;
+      margin-bottom: 30px;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 11px;
+      top: 8px;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--primary-pink), var(--primary-blue));
+      border-radius: 50%;
+      box-shadow: var(--shadow-md);
+    }
+    .timeline-card {
+      padding: 26px;
+      border-radius: var(--radius-lg);
+      background: var(--gray);
+      border: 1px solid var(--line);
+    }
+    .timeline-date {
+      color: var(--dark-pink);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+    .timeline-card h3 { margin: 8px 0 4px; }
+    .timeline-company {
+      margin-bottom: 10px;
+      color: var(--primary-blue);
+      font-weight: 800;
+    }
+    .timeline-card p { color: var(--muted); }
+
+    .contact {
+      background: linear-gradient(135deg, var(--soft-pink), var(--soft-blue));
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .contact-info p {
+      margin: 18px 0 26px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+    .contact-list { display: grid; gap: 14px; }
+    .contact-list a, .contact-list span {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: fit-content;
+      max-width: 100%;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      background: var(--white);
+      border: 1px solid var(--line);
+      color: var(--navy);
+      font-weight: 800;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-list i { color: var(--dark-pink); }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+    .form-group { display: grid; gap: 7px; }
+    label {
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 13px 14px;
+      background: var(--white);
+      color: var(--ink);
+      outline: none;
+    }
+    textarea { resize: vertical; }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary-pink);
+      box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.14);
+    }
+    .form-note {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    footer {
+      padding: 28px 0;
+      background: #0b1120;
+      color: rgba(255, 255, 255, 0.75);
+    }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+    }
+    .footer-row a { font-weight: 800; color: white; }
+
+    @media (max-width: 1024px) {
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .services-grid, .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-visual { max-width: 520px; margin: 0 auto; width: 100%; }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: min(100% - 28px, 1200px); }
+      .logo span:last-child { display: none; }
+      .mobile-toggle { display: grid; }
+      .nav-menu {
+        position: absolute;
+        top: 88px;
+        left: 14px;
+        right: 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--white);
+        box-shadow: var(--shadow-lg);
+      }
+      .nav-menu.open { display: flex; }
+      .nav-link { text-align: center; }
+      .hero { padding-top: 110px; }
+      .hero-buttons .btn { width: 100%; }
+      .hero-stats { gap: 22px; }
+      .profile-badge { position: static; margin-top: 14px; max-width: none; animation: none; }
+      section { padding: 76px 0; }
+      .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
+      .filters { justify-content: stretch; }
+      .filter-btn { flex: 1 1 46%; }
+      .footer-row { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar container">
+      <a href="#home" class="logo" aria-label="Rizki Wulandari">
+        <span class="logo-icon">RW</span>
+        <span>Rizki Wulandari</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Buka menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-sparkles"></i>
+            Available for Creative Projects
+          </div>
+
+          <h1>Creative Designer yang Menggabungkan <span>Visual, Komunikasi, dan Strategi Digital.</span></h1>
+
+          <p class="hero-desc">
+            Saya Rizki Wulandari, Creative Designer, Communications Specialist, MC, Fasilitator, dan Digital Marketing enthusiast
+            dengan latar belakang Sistem Informasi. Saya membantu brand dan organisasi menyampaikan pesan melalui desain,
+            konten, video, dan komunikasi yang berdampak.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn btn-primary">
+              <i class="fa-solid fa-briefcase"></i>
+              Lihat Portfolio
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-paper-plane"></i>
+              Hubungi Saya
+            </a>
+            <a href="#" class="btn btn-download" download>
+              <i class="fa-solid fa-download"></i>
+              Download CV
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>40%</h3>
+              <p>Peningkatan penjualan</p>
+            </div>
+            <div class="stat-item">
+              <h3>4+</h3>
+              <p>Area keahlian kreatif</p>
+            </div>
+            <div class="stat-item">
+              <h3>2023</h3>
+              <p>Aktif di komunikasi sponsor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-placeholder">
+              <i class="fa-solid fa-user-pen"></i>
+              <strong>Rizki Wulandari</strong>
+              <span>Creative Graphic Designer & Communications Specialist</span>
+            </div>
+
+            <div class="profile-badge profile-badge-1">
+              <div class="badge-icon pink"><i class="fa-solid fa-palette"></i></div>
+              <div>
+                <strong>Graphic Design</strong>
+                <span>Canva, CorelDRAW, Photoshop</span>
+              </div>
+            </div>
+
+            <div class="profile-badge profile-badge-2">
+              <div class="badge-icon blue"><i class="fa-solid fa-video"></i></div>
+              <div>
+                <strong>Video & Social Media</strong>
+                <span>Premiere Pro, CapCut, Instagram</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-board">
+            <div class="board-card"><i class="fa-solid fa-laptop-code"></i> Background Sistem Informasi</div>
+            <div class="board-card"><i class="fa-solid fa-chart-line"></i> Strategi visual yang mendukung marketing</div>
+            <div class="board-card"><i class="fa-solid fa-comments"></i> Komunikasi sponsor dan relasi klien</div>
+            <div class="board-card"><i class="fa-solid fa-microphone"></i> MC, fasilitator, dan public speaking</div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <span class="section-label">About Me</span>
+          <h2>Desainer kreatif yang bekerja dengan rasa, strategi, dan ketelitian.</h2>
+          <p>
+            Saya memiliki pengalaman dalam desain grafis, manajemen media sosial, video editing, dan komunikasi sponsor.
+            Dengan kemampuan kreatif dan latar belakang Sistem Informasi, saya terbiasa menyusun pesan visual yang bukan hanya
+            menarik, tetapi juga terarah dan relevan dengan kebutuhan audiens.
+          </p>
+          <p>
+            Saya senang terlibat dalam proyek yang membutuhkan kreativitas, koordinasi, komunikasi publik, dan storytelling.
+            Mulai dari membuat materi promosi, mengelola konten media sosial, menyusun video testimonial, hingga membangun
+            komunikasi dengan sponsor dan komunitas.
+          </p>
+
+          <div class="skills">
+            <span class="skill-tag">Graphic Design</span>
+            <span class="skill-tag">Video Editing</span>
+            <span class="skill-tag">Social Media</span>
+            <span class="skill-tag">Digital Marketing</span>
+            <span class="skill-tag">Copywriting</span>
+            <span class="skill-tag">Sponsor Relations</span>
+            <span class="skill-tag">MC</span>
+            <span class="skill-tag">Fasilitator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Services</span>
+          <h2 class="section-title">Layanan Kreatif</h2>
+          <p class="section-desc">Solusi visual dan komunikasi untuk mendukung kebutuhan brand, organisasi, dan kampanye digital.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+            <h3>Desain Grafis</h3>
+            <p>Desain promosi, katalog, poster, template, kartu ucapan, dan kebutuhan visual brand.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
+            <h3>Media Sosial</h3>
+            <p>Perencanaan konten, kalender editorial, caption, desain feed, dan evaluasi performa.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-video"></i></div>
+            <h3>Produksi Video</h3>
+            <p>Editing video testimonial, dokumentasi kegiatan, kampanye, dan konten storytelling.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Komunikasi Sponsor</h3>
+            <p>Materi komunikasi sponsor, laporan kegiatan, relasi klien, dan pesan kampanye.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Portfolio</span>
+          <h2 class="section-title">Karya dan Area Project</h2>
+          <p class="section-desc">Struktur galeri untuk menampilkan karya desain, sosial media, video, dan komunikasi kreatif.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="design">Desain</button>
+          <button class="filter-btn" data-filter="social">Social Media</button>
+          <button class="filter-btn" data-filter="video">Video</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card" data-category="design">
+            <div class="portfolio-thumb"><i class="fa-solid fa-pen-nib"></i></div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Desain Grafis</span>
+              <h3>Promotional Visual Design</h3>
+              <p>Materi promosi, katalog produk, poster, dan aset visual untuk kebutuhan marketing.</p>
+              <div class="portfolio-tags"><span>Canva</span><span>CorelDRAW</span><span>Photoshop</span></div>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="social">
+            <div class="portfolio-thumb"><i class="fa-solid fa-calendar-days"></i></div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Social Media</span>
+              <h3>Editorial Content System</h3>
+              <p>Pengelolaan kalender editorial, desain posting, caption, dan interaksi audiens.</p>
+              <div class="portfolio-tags"><span>Instagram</span><span>Facebook</span><span>YouTube</span></div>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="video">
+            <div class="portfolio-thumb"><i class="fa-solid fa-film"></i></div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Produksi Video</span>
+              <h3>Campaign & Testimonial Video</h3>
+              <p>Video storytelling untuk program, kegiatan, testimonial, dan kampanye kesadaran.</p>
+              <div class="portfolio-tags"><span>Premiere Pro</span><span>CapCut</span><span>Storytelling</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Experience</span>
+          <h2 class="section-title">Pengalaman Profesional</h2>
+          <p class="section-desc">Perjalanan kerja di bidang desain, marketing, komunikasi sponsor, dan media komunikasi.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Juni 2024 - Sekarang</span>
+              <h3>Koordinator Media Komunikasi</h3>
+              <p class="timeline-company">YPSK Lampung</p>
+              <p>Mengembangkan konten tulisan, foto, dan video, mengelola kalender editorial, serta menjalankan strategi media sosial.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-handshake-angle"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Mei 2023 - Sekarang</span>
+              <h3>Co-Sponsorship Relation Officer</h3>
+              <p class="timeline-company">YPSK Lampung</p>
+              <p>Membangun hubungan sponsor, menyusun laporan, membuat template komunikasi, dan mengelola materi testimonial program.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Maret 2022 - Mei 2023</span>
+              <h3>Koordinator Administrasi dan Marketing</h3>
+              <p class="timeline-company">Bazink Art</p>
+              <p>Membuat materi promosi, mengelola media sosial, riset pasar, laporan penjualan, dan mendukung peningkatan penjualan 40%.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-paintbrush"></i></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Januari 2022 - Maret 2022</span>
+              <h3>Desainer Grafis</h3>
+              <p class="timeline-company">Bazink Art</p>
+              <p>Membuat konsep desain sesuai kebutuhan pelanggan dan standar produksi menggunakan Canva, CorelDRAW, dan Photoshop.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-label">Contact</span>
+          <h2>Mari wujudkan ide visual yang lebih kuat.</h2>
+          <p>
+            Punya kebutuhan desain, konten media sosial, video komunikasi, MC, fasilitator, atau kolaborasi sponsor?
+            Silakan hubungi saya untuk berdiskusi.
+          </p>
+
+          <div class="contact-list">
+            <a href="mailto:rzkiiwlndr@gmail.com"><i class="fa-solid fa-envelope"></i>rzkiiwlndr@gmail.com</a>
+            <a href="tel:+6282278444670"><i class="fa-solid fa-phone"></i>+62 822-7844-4670</a>
+            <span><i class="fa-solid fa-location-dot"></i>Pringsewu, Lampung</span>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input id="name" name="name" type="text" placeholder="Nama Anda" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="nama@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="project">Jenis Project</label>
+            <select id="project" name="project" required>
+              <option value="">Pilih kebutuhan</option>
+              <option>Desain Grafis</option>
+              <option>Manajemen Media Sosial</option>
+              <option>Produksi Video</option>
+              <option>MC / Fasilitator</option>
+              <option>Kolaborasi Sponsor</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan project Anda..." required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Kirim Pesan
+          </button>
+
+          <p class="form-note">Form ini akan membuka aplikasi email dengan pesan yang sudah tersusun otomatis.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Rizki Wulandari. All rights reserved.</p>
+      <a href="#home">Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navMenu = document.getElementById("navMenu");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const portfolioCards = document.querySelectorAll(".portfolio-card");
+    const contactForm = document.getElementById("contactForm");
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = root.getAttribute("data-theme");
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", nextTheme);
+      themeToggle.innerHTML = nextTheme === "dark"
+        ? '<i class="fa-solid fa-sun"></i>'
+        : '<i class="fa-solid fa-moon"></i>';
+    });
+
+    mobileToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+      mobileToggle.innerHTML = navMenu.classList.contains("open")
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        portfolioCards.forEach((card) => {
+          const showCard = filter === "all" || card.dataset.category === filter;
+          card.classList.toggle("hide", !showCard);
+        });
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      let currentSection = "";
+
+      document.querySelectorAll("main section").forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        if (scrollY >= sectionTop) currentSection = section.getAttribute("id");
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${currentSection}`);
+      });
+    });
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const data = new FormData(contactForm);
+      const subject = encodeURIComponent(`Project Inquiry - ${data.get("project")}`);
+      const body = encodeURIComponent(
+        `Halo Rizki,\n\nNama: ${data.get("name")}\nEmail: ${data.get("email")}\nJenis Project: ${data.get("project")}\n\nPesan:\n${data.get("message")}\n\nTerima kasih.`
+      );
+
+      window.location.href = `mailto:rzkiiwlndr@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
